@@ -112,4 +112,7 @@
       .Joke-text{
           font-size: .8rem;
       }
+      .Joke {
+          padding: 0;
+      }
   }
