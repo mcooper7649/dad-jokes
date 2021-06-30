@@ -1,0 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgb(238,174,202);
+  background: linear-gradient(198deg, rgba(238,174,202,1) 0%, rgba(148,187,233,0.8057598039215687) 100%);
+  font-family: 'Rubik', sans-serif;
+  color: #78909c;
+}
