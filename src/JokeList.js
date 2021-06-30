@@ -45,6 +45,7 @@ class JokeList extends Component {
         () =>
           window.localStorage.setItem("jokes", JSON.stringify(this.state.jokes))
       );
+      this.okaySound()
     } catch (e) {
       alert(e);
       this.setState({ loading: false });
@@ -63,6 +64,28 @@ class JokeList extends Component {
   }
   handleClick() {
     this.setState({ loading: true }, this.getJokes);
+  }
+
+  laughSound(){
+    let audio = new Audio("./dualaugh.mp3")
+    const start = () => {
+        audio.play()
+      }
+      start();
+  }
+  booSound(){
+    let audio = new Audio("./boo.mp3")
+    const start = () => {
+        audio.play()
+      }
+      start();
+  }
+  okaySound(){
+    let audio = new Audio("./okay.mp3")
+    const start = () => {
+        audio.play()
+      }
+      start();
   }
   render() {
     if (this.state.loading) {
@@ -93,8 +116,8 @@ class JokeList extends Component {
               key={j.id}
               votes={j.votes}
               text={j.text}
-              upvote={() => this.handleVote(j.id, 1)}
-              downvote={() => this.handleVote(j.id, -1)}
+              upvote={() => this.handleVote(j.id, 1), this.laughSound}
+              downvote={() => this.handleVote(j.id, -1), this.booSound}
             />
           ))}
         </div>
