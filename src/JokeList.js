@@ -116,8 +116,10 @@ class JokeList extends Component {
               key={j.id}
               votes={j.votes}
               text={j.text}
-              upvote={() => this.handleVote(j.id, 1), (this.laughSound)}
-              downvote={() => this.handleVote(j.id, -1), (this.booSound)}
+              upvote={() => this.handleVote(j.id, 1)}
+              laugh={this.laughSound}
+              boo={this.booSound}
+              downvote={() => this.handleVote(j.id, -1)}
             />
           ))}
         </div>

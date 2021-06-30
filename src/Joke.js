@@ -41,9 +41,9 @@ getEmoji(){
         return (
             <div className="Joke">
                <div className="Joke-buttons">
-                   <i onClick={this.props.upvote} alt="upvote" className="fas fa-arrow-up"></i>
+                   <i onClick={this.props.upvote && this.props.laugh} alt="upvote" className="fas fa-arrow-up"></i>
                    <span className="Joke-votes" style={{borderColor: this.getColor()}}>{this.props.votes}</span>
-                   <i onClick={this.props.downvote} alt="downvote" className="fas fa-arrow-down"></i>
+                   <i onClick={this.props.downvote && this.props.boo} alt="downvote" className="fas fa-arrow-down"></i>
                </div>
                <div className="Joke-text">
                     {this.props.text}
